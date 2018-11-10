@@ -4,5 +4,5 @@ import { Component } from '@angular/core';
   selector: 'header-view',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'
-})
+,})
 export class HeaderComponent {}
