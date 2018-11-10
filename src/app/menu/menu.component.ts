@@ -13,12 +13,11 @@ export class MenuComponent implements OnInit {
   public isSafari: boolean = false;
   public subscribeText: Subject<string> = new ReplaySubject();
   public menuElements: MenuElement[] = [
-    {link: '/donors', icon: 'attach_money', text: 'Donors'},
-    {link: '/', icon: 'home', text: 'Home'},
-    {link: '/lazy', icon: 'free_breakfast', text: 'Lazy module'},
+    {link: '/', text: 'Home'},
+    {link: '/web', text: 'Web'},
+    {link: '/print', text: 'Print'},
     // {link: '/external', icon: 'call_merge', text: 'External module'}, //not works because of https://github.com/angular/angular-cli/issues/8284
-    {link: '/transferState', icon: 'call_merge', text: 'TransferState (API calls)'},
-    {link: 'https://github.com/maciejtreder/angular-universal-pwa', icon: 'code', text: 'Fork on github'},
+    {link: '/about', text: 'About'},
   ];
   @Input('contextual')
   @HostBinding('class.contextual')

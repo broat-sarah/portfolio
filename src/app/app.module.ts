@@ -12,7 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule, MatSnackBarModule } from '@angular/material';
 import { MenuComponent } from './menu/menu.component';
 import { Notifications } from './services/notifications.service';
-import { DonorsComponent } from './donors/donors.component';
+import { WebComponent } from './web/web.component';
 import { WithTransferStateComponent } from './transfer-state/with-transfer-state.component';
 import { WithoutTransferStateComponent } from './transfer-state/without-transfer-state.component';
 import { HitWithTransferStateResolver } from './services/resolvers/hitWithTransferState.resolver';
@@ -30,7 +30,7 @@ import { Meta, Title } from '@angular/platform-browser';
         HomeComponent,
         TransferStateComponent,
         MenuComponent,
-        DonorsComponent,
+        WebComponent,
         WithTransferStateComponent,
         WithoutTransferStateComponent
     ],
@@ -42,7 +42,7 @@ import { Meta, Title } from '@angular/platform-browser';
         CommonModule,
         RouterModule.forRoot([
             { path: '', component: HomeComponent, data: {title: 'Home', description: 'Homepage - quick overview.'}},
-            { path: 'donors', component: DonorsComponent, data: {title: 'Donors', description: 'List of donations. Became a donor!'}},
+            { path: 'web', component: WebComponent, data: {title: 'Web', description: 'Examples of web and UX/UI design.'}},
             { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule', data: {title: 'Lazy module', description: 'Lazy module example.'}},
             // { path: 'external', loadChildren: '@angular-universal-serverless/external-module/release#ExternalModule', data: {title: 'External module', description: 'External module example.'}}, not works because of https://github.com/angular/angular-cli/issues/8284
             { path: 'transferState', data: {title: 'Transfer state (API)', description: 'Angular TransferState example.'}, children: [
