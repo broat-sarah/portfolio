@@ -56,6 +56,5 @@ export class MenuComponent implements OnInit {
 
 interface MenuElement {
   link: string;
-  icon: string;
   text: string;
 }
