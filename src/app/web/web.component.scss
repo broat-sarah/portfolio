@@ -15,43 +15,36 @@ h2 {
 }
 h3 {
   font-family: 'Libre Baskerville', serif !important;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
   color: #333;
 }
 p{
   font-size: 1.25rem;
+  margin-top: 0.25rem;
 }
-ul{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+a {
+color: #333 !important;
+font-weight: 400;
+padding: 5px;
+font-size: 1.25rem;
+position: relative;
+width: auto;
+&:after{
+  display: block;
+  content: '';
+  border-bottom: 1px solid #333;
+  transform: scaleX(0);
+  transition: .3s transform ease;
+  width: inherit;
 }
-li{
-  display: inline-flex;
-  padding: 10px 20px;
-  font-size: 1.25em !important;
+&:hover, &:active, &:focus{
+  text-decoration: none;
 }
-li{
-  a {
-  color: #333 !important;
-  font-weight: 400;
-  padding: 5px;
-  &:after{
-    display: block;
-    content: '';
-    border-bottom: 1px solid #333;
-    transform: scaleX(0);
-    transition: .3s transform ease
-  }
-  &:hover, &:active, &:focus{
-    text-decoration: none;
-  }
-  &:hover:after, &:active:after, &:focus:after{
-    transform: scaleX(1);
+&:hover:after, &:active:after, &:focus:after{
+  transform: scaleX(1);
 }
-  &:not(:hover){
-    color: #888 !important;
-  }
+&:not(:hover){
+  color: #888 !important;
 }
 }

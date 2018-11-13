@@ -1,12 +1,17 @@
 <div class="row">
   <div class="col l3"></div>
   <div class="col l6">
+    <div [@clearOpaque]="isClear ? 'clear' : 'opaque'">
     <img src="./assets/img/hexagonbee3.gif" class="logo-main">
-    <h1 class="center">Sarah Broat</h1>
+    </div>
+    <h1 typingAnimation [typeSpeed]="110" [condition]="start" [startDelay]="0" [hideCursorOnComplete]="true" (complete)="onTypingAnimationComplete()" class="center">
+        Sarah Broat
+      </h1>
+    <!--<h1 class="center">Sarah Broat</h1>-->
     <ul>
-      <li><a [routerLink]="['/web']">Web</a></li>
-      <li><a [routerLink]="['/print']">Print</a></li>
-      <li><a [routerLink]="['/contact']">Contact</a></li>
+      <li><a [routerLink]="['/web']"><span typingAnimation [typeSpeed]="150" [condition]="start" [startDelay]="1500" [hideCursorOnComplete]="true" (complete)="onTypingAnimationComplete()">Web</span></a></li>
+      <li><a [routerLink]="['/print']"><span typingAnimation [typeSpeed]="150" [condition]="start" [startDelay]="2500" [hideCursorOnComplete]="true" (complete)="onTypingAnimationComplete()">Print</span></a></li>
+      <li><a [routerLink]="['/contact']"><span typingAnimation [typeSpeed]="150" [condition]="start" [startDelay]="3600" [hideCursorOnComplete]="true" (complete)="onTypingAnimationComplete()">Contact</span></a></li>
     </ul>
   </div>
   <div class="col l3"></div>

@@ -21,6 +21,9 @@ import { ExampleApi } from './services/exampleApi.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Meta, Title } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { TypingAnimationModule } from 'angular-typing-animation';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { PrebootModule } from 'preboot';
 
 @NgModule({
@@ -40,6 +43,9 @@ import { Meta, Title } from '@angular/platform-browser';
         MatMenuModule,
         TranslateModule.forChild(),
         CommonModule,
+        BrowserModule,
+        TypingAnimationModule,
+        BrowserAnimationsModule,
         RouterModule.forRoot([
             { path: '', component: HomeComponent, data: {title: 'Home', description: 'Homepage - quick overview.'}},
             { path: 'web', component: WebComponent, data: {title: 'Web', description: 'Examples of web and UX/UI design.'}},
