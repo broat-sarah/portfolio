@@ -10,13 +10,18 @@ h1{
   margin-top: 0rem;
 }
 h2 {
-  font-family: 'Libre Baskerville', serif !important;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
 }
 h3 {
   font-family: 'Libre Baskerville', serif !important;
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+h4 {
+  font-family: 'Libre Baskerville', serif !important;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
   color: #333;
 }
 p{
@@ -30,21 +35,20 @@ padding: 5px;
 font-size: 1.25rem;
 position: relative;
 width: auto;
+max-width: auto;
 &:after{
   display: block;
   content: '';
   border-bottom: 1px solid #333;
   transform: scaleX(0);
   transition: .3s transform ease;
-  width: inherit;
+  width: 5rem;
 }
 &:hover, &:active, &:focus{
   text-decoration: none;
+  font-weight: 600;
 }
 &:hover:after, &:active:after, &:focus:after{
   transform: scaleX(1);
-}
-&:not(:hover){
-  color: #888 !important;
 }
 }

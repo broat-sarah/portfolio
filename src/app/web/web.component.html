@@ -1,21 +1,22 @@
 <div class="row">
-  <h1 class="center">Web</h1>
-  <p class="center">Examples of web and UX/UI projects created using HTML5, CSS3, Angular, and Material Design.</p>
+  <h1 typingAnimation [typeSpeed]="150" [condition]="start" [startDelay]="500" [hideCursorOnComplete]="true" (complete)="onTypingAnimationComplete()" class="center">
+      Web
+    </h1>
+  <h2 typingAnimation [typeSpeed]="80" [condition]="start" [startDelay]="1500" [hideCursorOnComplete]="true" (complete)="onTypingAnimationComplete()" class="center">Examples of web and UX/UI projects</h2>
   <div class="row">
-    <div class="col l5 offset-l1 m12 s12" style="padding: 60px;">
-      <ng-container *ngFor="let element of webElements">
-      <h2>{{element.title}}</h2>
+    <ng-container *ngFor="let element of webElements">
+    <div class="col l6 m12 s12" style="padding: 20px 80px;">
+
+      <h3>{{element.title}}</h3>
       <video class="responsive-video" controls>
         <source src="{{element.asset}}" type="video/mp4">
       </video>
-      <h3>{{element.subheader}}</h3>
+      <h4>{{element.subheader}}</h4>
       <p>{{element.text}}</p>
       <a href="{{element.link}}" target="_blank">{{element.linkname}}</a>
-      <br><br>
-      </ng-container>
-      <br>
     </div>
-    <div class="col l5 m12 s12" style="padding: 60px;">
+    </ng-container>
+    <!--<div class="col l5 m12 s12" style="padding: 60px;">
     <ng-container *ngFor="let element of webElements2">
       <h2>{{element.title}}</h2>
       <video class="responsive-video" controls>
@@ -27,6 +28,6 @@
       <br><br>
       </ng-container>
       <br>
-      </div>
+      </div>-->
   </div>
 </div>
