@@ -1,29 +1,54 @@
 <div class="nav-wrapper">
   <ng-container *ngIf="contextual; else horizontal">
+  <mat-sidenav-container class="example-container">
+        <mat-sidenav #sidenav class="example-sidenav" mode="over">
+          <ng-container *ngFor="let element of menuElements">
+              <a *ngIf="element.link.startsWith('http'); else standard" mat-button target="_blank" routerLinkActive="active-link" rel="noopener" href="{{element.link}}">
+                  {{element.text}}
+              </a>
+              <ng-template #standard>
+                  <a mat-raised-button routerLink="{{element.link}}" routerLinkActive="active-link">{{element.text}}</a>
+              </ng-template>
+          </ng-container>
+        </mat-sidenav>
+
+        <div class="example-sidenav-content">
+          <button type="button" mat-button (click)="sidenav.open()">
+            <i class="material-icons">menu</i>
+          </button>
+        </div>
+
+      </mat-sidenav-container>
+      </ng-container>
+
+
+  <!--<ng-container *ngIf="contextual; else horizontal">
       <button mat-mini-fab [matMenuTriggerFor]="appMenu" class="menu-button open-nav">
           <i class="material-icons">menu</i>
       </button>
       <mat-menu #appMenu="matMenu">
           <ng-container *ngFor="let element of menuElements">
-              <a *ngIf="element.link.startsWith('http'); else standard" mat-button target="_blank" rel="noopener" href="{{element.link}}">
+              <a *ngIf="element.link.startsWith('http'); else standard" mat-button target="_blank" routerLinkActive="active-link" rel="noopener" href="{{element.link}}">
                   {{element.text}}
               </a>
               <ng-template #standard>
-                  <a mat-raised-button routerLink="{{element.link}}">{{element.text}}</a>
+                  <a mat-raised-button routerLink="{{element.link}}" routerLinkActive="active-link">{{element.text}}</a>
               </ng-template>
           </ng-container>
 
       </mat-menu>
-  </ng-container>
+  </ng-container>-->
 
   <ng-template #horizontal>
-      <ul class="right hide-on-med-and-down">
+      <ul class="right hide-on-sm-and-down">
           <li *ngFor="let element of menuElements">
-              <a *ngIf="element.link.startsWith('http'); else standard" btn-flat yellow lighten-5 target="_blank" rel="noopener" href="{{element.link}}">
+              <a *ngIf="element.link.startsWith('http'); else standard" btn-flat yellow lighten-5 target="_blank" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+true}" rel="noopener" href="{{element.link}}">
                   {{element.text}}
               </a>
               <ng-template #standard>
-                  <a btn-flat yellow lighten-5 routerLink="{{element.link}}">{{element.text}}</a>
+                  <a btn-flat yellow lighten-5 routerLink="{{element.link}}" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+true}">{{element.text}}</a>
               </ng-template>
           </li>
 

@@ -23,8 +23,6 @@ export class WebComponent implements OnInit{
       link: "http://diquoter.assurity.com",
       linkname: "Visit Site"
     },
-  //];
-  //  public webElements2: WebElement2[] = [
     {
       asset: './assets/vid/annualreport.mp4',
       title: 'Annual Report 2017',
@@ -59,15 +57,6 @@ export class WebComponent implements OnInit{
 }
 
 interface WebElement {
-    asset: string;
-    title: string;
-    subheader: string;
-    text: string;
-    link: string;
-    linkname: string;
-  }
-
-  interface WebElement2 {
     asset: string;
     title: string;
     subheader: string;

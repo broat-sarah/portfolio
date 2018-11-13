@@ -29,10 +29,10 @@ p{
   margin-top: 0.25rem;
 }
 a {
-color: #333 !important;
+color: #ff8f00;
 font-weight: 400;
 padding: 5px;
-font-size: 1.25rem;
+font-size: 1.5rem;
 position: relative;
 width: auto;
 max-width: auto;
@@ -42,11 +42,12 @@ max-width: auto;
   border-bottom: 1px solid #333;
   transform: scaleX(0);
   transition: .3s transform ease;
-  width: 5rem;
+  width: 6.5rem;
 }
 &:hover, &:active, &:focus{
   text-decoration: none;
   font-weight: 600;
+  color: #333;
 }
 &:hover:after, &:active:after, &:focus:after{
   transform: scaleX(1);

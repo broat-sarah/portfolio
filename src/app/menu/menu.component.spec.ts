@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import * as sinon from 'sinon';
 import { DebugElement, Directive, HostListener, Input } from '@angular/core';
 import { MatMenuModule } from '@angular/material';
+import { MatIconModule, MatCardModule, MatSidenavModule } from '@angular/material';
 import { WindowRef } from '../window-ref.service';
 import { Notifications } from '../services/notifications.service';
 import { Subject, BehaviorSubject, of } from 'rxjs';
@@ -30,15 +31,10 @@ const windowRefStub = sinon.createStubInstance(WindowRef);
 const isRegistered: Subject<boolean> = new BehaviorSubject(false);
 
 let homeLink;
-let lazyLink;
-let proxyLink;
-let forkLink;
-let subscribeLink;
+let webLink;
+let printLink;
+let aboutLink;
 
-const findSubscribeLink = () => {
-  fixture.detectChanges();
-  subscribeLink = fixture.debugElement.queryAll(By.css('a')).find((de: DebugElement) => de.nativeElement.textContent.includes('Subscribe to push') || de.nativeElement.textContent.includes('Unsubscribe from push'));
-};
 
 const setupTestBed = () => {
   nsServiceStub = sinon.createStubInstance(Notifications);
@@ -76,46 +72,27 @@ describe('Menu component.', () => {
     const anchors: DebugElement[] = fixture.debugElement.queryAll(By.css('a'));
 
     homeLink = anchors.find((de: DebugElement) => de.nativeElement.textContent.includes('Home'));
-    lazyLink = anchors.find((de: DebugElement) => de.nativeElement.textContent.includes('Lazy'));
-    proxyLink = anchors.find((de: DebugElement) => de.nativeElement.textContent.includes('Http proxy demo'));
-    forkLink = anchors.find((de: DebugElement) => de.nativeElement.textContent.includes('Fork on github'));
+    webLink = anchors.find((de: DebugElement) => de.nativeElement.textContent.includes('Web'));
+    printLink = anchors.find((de: DebugElement) => de.nativeElement.textContent.includes('Print'));
+    aboutLink = anchors.find((de: DebugElement) => de.nativeElement.textContent.includes('About'));
   });
 
   it('Home link should be displayed', () => {
     expect(homeLink).toBeTruthy();
   });
 
-  it('Lazy module link should be displayed', () => {
-    expect(lazyLink).toBeTruthy();
+  it('Web design link should be displayed', () => {
+    expect(webLink).toBeTruthy();
   });
 
-  it('Should display fork link', () => {
-    expect(forkLink).toBeTruthy();
+  it('Should display print design link', () => {
+    expect(printLink).toBeTruthy();
   });
 
-  it('Should display subscribe link when subscription is available', () => {
-    expect(subscribeLink.nativeElement.textContent).toContain('Subscribe to push');
+  it('Should display about and contact link', () => {
+    expect(aboutLink).toBeTruthy();
   });
 
-  it('Should not display subscribe link when subscription is not available', async(() => {
-    nsServiceStub.isPushAvailable.returns(false);
-    findSubscribeLink();
-    expect(subscribeLink).toBeFalsy();
-  }));
-
-  it('When subscribe link is clicked, then subscribe method should be called', async(() => {
-    nsServiceStub.subscribeToPush.returns(of(true));
-    subscribeLink.nativeElement.click();
-    expect(nsServiceStub.subscribeToPush.calledOnce).toBe(true, 'Register to push method was not called.');
-  }));
-
-  it('Subscribe button value should be switch depending on isSubscribed observable', async(() => {
-    expect(subscribeLink.nativeElement.textContent).toContain('Subscribe to push');
-    isRegistered.next(true);
-    fixture.detectChanges();
-    expect(subscribeLink.nativeElement.textContent).toContain('Unsubscribe from push');
-  }));
-});
 
 describe('Safari', () => {
   beforeEach(() => {
@@ -132,14 +109,4 @@ describe('Safari', () => {
     setupTestBed();
   });
 
-  it('Subscribe button should be visible on Safari', async(() => {
-    findSubscribeLink();
-    expect(subscribeLink.nativeElement.textContent).toContain('Subscribe to push', 'Message on the button is incorrect');
-  }));
-
-  it('Unsubscribe button should not be visible on Safari', async(() => {
-    isRegistered.next(true);
-    findSubscribeLink();
-    expect(subscribeLink).toBeUndefined('Button should disappear');
-  }));
 });
