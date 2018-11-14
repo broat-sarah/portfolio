@@ -17,11 +17,40 @@
 
 .example-sidenav {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    div{
+      .mat-drawer-inner-container {
+        display: inline-flex;
+        flex-direction: column;
+      }
+    }
+    a{
+      .mat-raised-button{
+        width: 100% !important;
+      }
+    }
+}
+.mat-drawer-inner-container {
+  display: inline-flex;
+  flex-direction: column;
 }
 .demo-panel {
     margin: 10px;
 }
 
+.mat-list-item-content {
+  justify-content: center !important;
+}
+
+.mat-list-item {
+  width: 35vw !important;
+}
 
 :host(.contextual) {
   button {
@@ -107,11 +136,39 @@ span:hover {
 @media (max-width: 768px) {
   :host(.contextual) {
     display: block !important;
+    position: absolute;
+    z-index: 5000;
   }
+
+  button:focus {
+    outline: none;
+    background-color: #323232 !important;
+}
 
   :host {
     display: none;
   }
+  a {
+    margin: 0 3px;
+    font-size: 1.25em !important;
+    font-weight: 400 !important;
+    background: #f5f5f5;
+    &.active-link {
+      color: #ff6f00;
+      background: #fff;
+      font-weight: 600 !important;
+    }
+    &:not(.active-link){
+      color: #333;
+    }
+    &:hover {
+      color: #ffa000 !important;
+      background-color: #fafafa !important;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+
 }
 @media (min-width: 768px) {
   :host(.contextual) {

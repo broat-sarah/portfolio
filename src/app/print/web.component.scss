@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+.logo-main{
+  width: 75%;
+  max-width: 450px;
+  display: block;
+  margin: -12vh auto 0 auto;
+}
+h1{
+  font-family: 'Libre Baskerville', serif !important;
+  margin-top: 0rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-family: 'Libre Baskerville', serif !important;
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+h4 {
+  font-family: 'Libre Baskerville', serif !important;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+p{
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+a {
+color: #ff8f00;
+font-weight: 400;
+padding: 5px;
+font-size: 1.5rem;
+position: relative;
+width: auto;
+max-width: auto;
+&:after{
+  display: block;
+  content: '';
+  border-bottom: 1px solid #333;
+  transform: scaleX(0);
+  transition: .3s transform ease;
+  width: 6.5rem;
+}
+&:hover, &:active, &:focus{
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+}
+&:hover:after, &:active:after, &:focus:after{
+  transform: scaleX(1);
+}
+}

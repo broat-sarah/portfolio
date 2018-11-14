@@ -2,19 +2,23 @@
   <ng-container *ngIf="contextual; else horizontal">
   <mat-sidenav-container class="example-container">
         <mat-sidenav #sidenav class="example-sidenav" mode="over">
+          <mat-nav-list>
           <ng-container *ngFor="let element of menuElements">
-              <a *ngIf="element.link.startsWith('http'); else standard" mat-button target="_blank" routerLinkActive="active-link" rel="noopener" href="{{element.link}}">
+                <a *ngIf="element.link.startsWith('http'); else standard" mat-list-item center target="_blank" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+  true}" rel="noopener" href="{{element.link}}">
                   {{element.text}}
               </a>
               <ng-template #standard>
-                  <a mat-raised-button routerLink="{{element.link}}" routerLinkActive="active-link">{{element.text}}</a>
+                  <a mat-list-item center routerLink="{{element.link}}" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+    true}">{{element.text}}</a>
               </ng-template>
           </ng-container>
+          </mat-nav-list>
         </mat-sidenav>
 
         <div class="example-sidenav-content">
           <button type="button" mat-button (click)="sidenav.open()">
-            <i class="material-icons">menu</i>
+            <i class="material-icons" style="color: #fff9c4;">menu</i>
           </button>
         </div>
 

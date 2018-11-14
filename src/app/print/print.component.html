@@ -1,0 +1,44 @@
+<div class="row">
+  <h1 typingAnimation [typeSpeed]="150" [condition]="start" [startDelay]="500" [hideCursorOnComplete]="true" (complete)="onTypingAnimationComplete()" class="center">
+      Print
+    </h1>
+  <h2 typingAnimation [typeSpeed]="80" [condition]="start" [startDelay]="1500" [hideCursorOnComplete]="true" (complete)="onTypingAnimationComplete()" class="center">Examples of print design</h2>
+<p typingAnimation [typeSpeed]="60" [condition]="start" [startDelay]="3800" [hideCursorOnComplete]="true" (complete)="onTypingAnimationComplete()" class="center">Select thumbnails to view full size images</p>
+  <div class="row">
+    <ng-container *ngFor="let element of webElements">
+    <div class="col l6 m12 s12" style="padding: 20px 80px;">
+
+      <h3>{{element.title}}</h3>
+      <div>
+    <span class="modal-trigger" (click)="myMtrlzModal.open()"><img src="{{element.thumb}}" class="responsive-img"></span>
+  </div>
+  <ngx-smart-modal #myMtrlzModal identifier="myMtrlzModal" [closable]="false" customClass="msg-modal">
+  <div class="modal-content">
+    <img src="{{element.asset}}" class="responsive-img">
+  </div>
+  <div class="modal-footer">
+    <span (click)="myMtrlzModal.close()" class="modal-action modal-close waves-effect waves-green btn-flat"
+          style="float: right; margin: 10px;">Close</span>
+  </div>
+</ngx-smart-modal>
+
+      <h4>{{element.subheader}}</h4>
+      <p>{{element.text}}</p>
+      <a href="{{element.link}}" target="_blank">{{element.linkname}}</a>
+    </div>
+    </ng-container>
+    <!--<div class="col l5 m12 s12" style="padding: 60px;">
+    <ng-container *ngFor="let element of webElements2">
+      <h2>{{element.title}}</h2>
+      <video class="responsive-video" controls>
+        <source src="{{element.asset}}" type="video/mp4">
+      </video>
+      <h3>{{element.subheader}}</h3>
+      <p>{{element.text}}</p>
+      <a href="{{element.link}}" target="_blank">{{element.linkname}}</a>
+      <br><br>
+      </ng-container>
+      <br>
+      </div>-->
+  </div>
+</div>

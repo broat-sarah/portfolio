@@ -3,6 +3,7 @@ import { WindowRef } from '../window-ref.service';
 import { Notifications } from '../services/notifications.service';
 import { Observable, of, ReplaySubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
+import {MatListModule} from '@angular/material/list';
 
 
 @Component({

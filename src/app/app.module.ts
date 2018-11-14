@@ -13,6 +13,7 @@ import { MatMenuModule, MatSnackBarModule } from '@angular/material';
 import { MenuComponent } from './menu/menu.component';
 import { Notifications } from './services/notifications.service';
 import { WebComponent } from './web/web.component';
+import { PrintComponent } from './print/print.component';
 import { WithTransferStateComponent } from './transfer-state/with-transfer-state.component';
 import { WithoutTransferStateComponent } from './transfer-state/without-transfer-state.component';
 import { HitWithTransferStateResolver } from './services/resolvers/hitWithTransferState.resolver';
@@ -24,7 +25,9 @@ import { Meta, Title } from '@angular/platform-browser';
 import { BrowserModule } from '@angular/platform-browser';
 import { TypingAnimationModule } from 'angular-typing-animation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { MatIconModule, MatCardModule, MatSidenavModule } from '@angular/material';
+import {MatListModule} from '@angular/material/list';
 // import { PrebootModule } from 'preboot';
 
 @NgModule({
@@ -35,6 +38,7 @@ import { MatIconModule, MatCardModule, MatSidenavModule } from '@angular/materia
         TransferStateComponent,
         MenuComponent,
         WebComponent,
+        PrintComponent,
         WithTransferStateComponent,
         WithoutTransferStateComponent
     ],
@@ -50,10 +54,12 @@ import { MatIconModule, MatCardModule, MatSidenavModule } from '@angular/materia
         MatCardModule,
         MatSidenavModule,
         BrowserAnimationsModule,
+        MatListModule,
+        NgxSmartModalModule.forRoot(),
         RouterModule.forRoot([
             { path: '', component: HomeComponent, data: {title: 'Home', description: 'Homepage - quick overview.'}},
             { path: 'web', component: WebComponent, data: {title: 'Web', description: 'Examples of web and UX/UI design.'}},
-            { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule', data: {title: 'Lazy module', description: 'Lazy module example.'}},
+            { path: 'print', component: PrintComponent, data: {title: 'Print', description: 'Examples of print design.'}},
             // { path: 'external', loadChildren: '@angular-universal-serverless/external-module/release#ExternalModule', data: {title: 'External module', description: 'External module example.'}}, not works because of https://github.com/angular/angular-cli/issues/8284
             { path: 'transferState', data: {title: 'Transfer state (API)', description: 'Angular TransferState example.'}, children: [
                 { path: '', component: TransferStateComponent, },

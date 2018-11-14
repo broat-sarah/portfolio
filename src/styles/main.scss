@@ -1,5 +1,6 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import "credentials";
+@import "~ngx-smart-modal/ngx-smart-modal";
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
@@ -21,7 +22,7 @@ body {
   color: #333;
 }
 
-*:not(.material-icons), *:not(h1) {
+*:not(.material-icons), *:not(h1), *:not(a.active-link) {
   font-weight: 300;
   font-family: 'Source Sans Pro', calibri, Arial, sans-serif !important;
 }
@@ -48,4 +49,17 @@ a {
 }
 h1{
   font-family: 'Libre Baskerville', serif !important;
+}
+.nsm-content{
+  width: 95%;
+}
+
+.msg-modal {
+  top: 5% !important;
+  max-height: 75vh !important;
+  width: 75% !important;
+  max-width: 75% !important;
+  border-radius: 10px !important;
+  padding: 0;
+  margin: auto;
 }
