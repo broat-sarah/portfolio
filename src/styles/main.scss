@@ -41,6 +41,9 @@ a {
   color: orange;
   text-decoration: none;
 }
+.print-web-col {
+  padding: 20px 80px !important;
+}
 
 .service_worker_snack { // can be removed when https://github.com/angular/material2/pull/4045 will be merged
   position: absolute;
@@ -62,4 +65,10 @@ h1{
   border-radius: 10px !important;
   padding: 0;
   margin: auto;
+}
+
+@media (max-width: 768px) {
+  .print-web-col {
+      padding: 0 !important;
+    }
 }

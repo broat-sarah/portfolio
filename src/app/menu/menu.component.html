@@ -20,6 +20,7 @@
           <button type="button" mat-button (click)="sidenav.open()">
             <i class="material-icons" style="color: #fff9c4;">menu</i>
           </button>
+          <a routerLink="/" class="brand-logo"><img src="./assets/img/essbee.png" style="height: 50px; margin: 7px 20px;" id="logo-mobile"></a>
         </div>
 
       </mat-sidenav-container>
@@ -44,6 +45,7 @@
   </ng-container>-->
 
   <ng-template #horizontal>
+    <a routerLink="/" class="brand-logo"><img src="./assets/img/essbee.png" style="height: 50px; margin: 7px 20px;"></a>
       <ul class="right hide-on-sm-and-down">
           <li *ngFor="let element of menuElements">
               <a *ngIf="element.link.startsWith('http'); else standard" btn-flat yellow lighten-5 target="_blank" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:

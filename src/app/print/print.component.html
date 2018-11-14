@@ -6,7 +6,7 @@
 <p typingAnimation [typeSpeed]="60" [condition]="start" [startDelay]="3800" [hideCursorOnComplete]="true" (complete)="onTypingAnimationComplete()" class="center">Select thumbnails to view full size images</p>
   <div class="row">
     <ng-container *ngFor="let element of webElements">
-    <div class="col l6 m12 s12" style="padding: 20px 80px;">
+    <div class="col l6 m12 s12 print-web-col">
 
       <h3>{{element.title}}</h3>
       <div>
@@ -27,18 +27,6 @@
       <a href="{{element.link}}" target="_blank">{{element.linkname}}</a>
     </div>
     </ng-container>
-    <!--<div class="col l5 m12 s12" style="padding: 60px;">
-    <ng-container *ngFor="let element of webElements2">
-      <h2>{{element.title}}</h2>
-      <video class="responsive-video" controls>
-        <source src="{{element.asset}}" type="video/mp4">
-      </video>
-      <h3>{{element.subheader}}</h3>
-      <p>{{element.text}}</p>
-      <a href="{{element.link}}" target="_blank">{{element.linkname}}</a>
-      <br><br>
-      </ng-container>
-      <br>
-      </div>-->
+
   </div>
 </div>

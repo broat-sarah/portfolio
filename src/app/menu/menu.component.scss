@@ -16,7 +16,6 @@
 }
 
 .example-sidenav {
-    padding: 20px;
     display: flex;
     flex-direction: column;
     -ms-flex-direction: column;
@@ -150,6 +149,7 @@ span:hover {
   }
   a {
     margin: 0 3px;
+    padding: 20px;
     font-size: 1.25em !important;
     font-weight: 400 !important;
     background: #f5f5f5;
@@ -162,12 +162,17 @@ span:hover {
       color: #333;
     }
     &:hover {
-      color: #ffa000 !important;
+      color: #ffb300 !important;
       background-color: #fafafa !important;
       text-decoration: none;
       font-weight: 600;
     }
   }
+  .brand-logo {
+      left: 50% !important;
+      top: -15 !important;
+      background: transparent !important;
+    }
 
 }
 @media (min-width: 768px) {
@@ -178,4 +183,11 @@ span:hover {
   :host {
     display: block;
   }
+}
+
+@media (max-width: 601px) {
+  #logo-mobile {
+      height: 40px !important;
+      margin: 5px 20px !important;
+    }
 }

@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
-.logo-main{
-  width: 75%;
-  max-width: 450px;
-  display: block;
-  margin: -12vh auto 0 auto;
-}
+
 img{
   width: 100%;
   display: block;
@@ -57,4 +52,10 @@ max-width: auto;
 &:hover:after, &:active:after, &:focus:after{
   transform: scaleX(1);
 }
+}
+
+@media (max-width: 768px){
+  .print-web-col{
+    padding: 0;
+  }
 }
