@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col l3"></div>
   <div class="col l6 m12 s12">
-    <div [@clearOpaque]="isClear ? 'clear' : 'opaque'">
+    <div [@clearOpaque]>
     <img src="./assets/img/hexagonbee3.gif" class="logo-main">
     </div>
     <h1 typingAnimation [typeSpeed]="110" [condition]="start" [startDelay]="0" [hideCursorOnComplete]="true" (complete)="onTypingAnimationComplete()" class="center">

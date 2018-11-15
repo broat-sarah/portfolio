@@ -16,8 +16,8 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
 
-  private title: string = this.titleService.getTitle();
-  private metaDescription: string = this.metaService.getTag('name=description').content;
+  title: string = this.titleService.getTitle();
+  metaDescription: string = this.metaService.getTag('name=description').content;
 
   constructor(@Inject(DOCUMENT) private document: any,
     @Inject(PLATFORM_ID) private platformId: any,
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     private translate: TranslateService,
     private titleService: Title,
     private metaService: Meta,
-    private router: Router
+    router: Router
   ) {
     this.translate.setDefaultLang(this.translate.getBrowserLang());
   }
