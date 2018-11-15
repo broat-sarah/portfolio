@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-import { TransferStateComponent } from './transfer-state/transfer-state.component';
+import { AboutComponent } from './about/about.component';
 import { SnackBar } from './services/snack-bar.service';
 import { WindowRef } from './window-ref.service';
 import { TranslateModule } from '@ngx-translate/core';
@@ -14,8 +14,6 @@ import { MenuComponent } from './menu/menu.component';
 import { Notifications } from './services/notifications.service';
 import { WebComponent } from './web/web.component';
 import { PrintComponent } from './print/print.component';
-import { WithTransferStateComponent } from './transfer-state/with-transfer-state.component';
-import { WithoutTransferStateComponent } from './transfer-state/without-transfer-state.component';
 import { HitWithTransferStateResolver } from './services/resolvers/hitWithTransferState.resolver';
 import { HitWithoutTransferStateResolver } from './services/resolvers/hitWithoutTransferState.resolver';
 import { ExampleApi } from './services/exampleApi.service';
@@ -28,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { MatIconModule, MatCardModule, MatSidenavModule } from '@angular/material';
 import {MatListModule} from '@angular/material/list';
+import { FormsModule }   from '@angular/forms';
 // import { PrebootModule } from 'preboot';
 
 @NgModule({
@@ -35,12 +34,10 @@ import {MatListModule} from '@angular/material/list';
         AppComponent,
         HeaderComponent,
         HomeComponent,
-        TransferStateComponent,
+        AboutComponent,
         MenuComponent,
         WebComponent,
-        PrintComponent,
-        WithTransferStateComponent,
-        WithoutTransferStateComponent
+        PrintComponent
     ],
     imports: [
         MatButtonModule,
@@ -55,17 +52,14 @@ import {MatListModule} from '@angular/material/list';
         MatSidenavModule,
         BrowserAnimationsModule,
         MatListModule,
+        FormsModule,
         NgxSmartModalModule.forRoot(),
         RouterModule.forRoot([
             { path: '', component: HomeComponent, data: {title: 'Home', description: 'Homepage - quick overview.'}},
             { path: 'web', component: WebComponent, data: {title: 'Web', description: 'Examples of web and UX/UI design.'}},
             { path: 'print', component: PrintComponent, data: {title: 'Print', description: 'Examples of print design.'}},
             // { path: 'external', loadChildren: '@angular-universal-serverless/external-module/release#ExternalModule', data: {title: 'External module', description: 'External module example.'}}, not works because of https://github.com/angular/angular-cli/issues/8284
-            { path: 'transferState', data: {title: 'Transfer state (API)', description: 'Angular TransferState example.'}, children: [
-                { path: '', component: TransferStateComponent, },
-                { path: 'with', component: WithTransferStateComponent, resolve: {hits: HitWithTransferStateResolver}},
-                { path: 'without', component: WithoutTransferStateComponent, resolve: {hits: HitWithoutTransferStateResolver}}
-            ]}
+            { path: 'about', component: AboutComponent, data: {title: 'About', description: 'About Sarah and how to contact her.'}}
         ]),
         HttpClientModule
         // PrebootModule.withConfig({appRoot: 'app-root'})

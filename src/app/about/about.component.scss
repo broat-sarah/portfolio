@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
-
-img{
-  width: 100%;
+#sarah-img{
+  width: 40vw;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
 }
+
 h1{
   font-family: 'Libre Baskerville', serif !important;
   margin-top: 0rem;
@@ -28,34 +30,41 @@ p{
   font-size: 1.25rem;
   margin-top: 0.25rem;
 }
+.emphasis {
+  font-family: 'Libre Baskerville', serif !important;
+  font-weight: bold;
+}
 a {
 color: #ff8f00;
 font-weight: 400;
-padding: 5px;
-font-size: 1.5rem;
-position: relative;
-width: auto;
-max-width: auto;
-&:after{
-  display: block;
-  content: '';
-  border-bottom: 1px solid #333;
-  transform: scaleX(0);
-  transition: .3s transform ease;
-  width: 6.5rem;
-}
+font-size: 1.25rem;
 &:hover, &:active, &:focus{
   text-decoration: none;
   font-weight: 600;
   color: #333;
 }
-&:hover:after, &:active:after, &:focus:after{
-  transform: scaleX(1);
- }
 }
 
-@media (max-width: 768px){
-  .print-web-col{
-    padding: 0;
+@media (max-width: 991px) {
+  #sarah-img {
+    width: 50vw;
+    height: auto;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  #sarah-img {
+    width: 50vw;
+    height: auto;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  #sarah-img {
+    width: 60vw;
+    height: auto;
+    max-width: 250px;
   }
 }
