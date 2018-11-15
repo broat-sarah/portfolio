@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     private translate: TranslateService,
     private titleService: Title,
     private metaService: Meta,
-    router: Router
+    public router: Router
   ) {
     this.translate.setDefaultLang(this.translate.getBrowserLang());
   }
