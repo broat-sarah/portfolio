@@ -1,0 +1,106 @@
+{
+  "configVersion": 1,
+  "appData": {
+    "name": "Angular Universal PWA",
+    "description": "Angular PWA with Server Side Rendering - starter"
+  },
+  "index": "broat-sarah.github.io/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "broat-sarah.github.io/index.html",
+        "broat-sarah.github.io/main.fa8b5914b074f98a8950.js",
+        "broat-sarah.github.io/polyfills.f6930679dbd092886231.js",
+        "broat-sarah.github.io/runtime.ec2944dd8b20ec099bf3.js",
+        "broat-sarah.github.io/styles.a6f7ca33ecf09a6acfd0.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "broat-sarah.github.io/assets/img/background.png",
+        "broat-sarah.github.io/assets/img/essbee.gif",
+        "broat-sarah.github.io/assets/img/essbee.png",
+        "broat-sarah.github.io/assets/img/guntastolzl.png",
+        "broat-sarah.github.io/assets/img/hexagonbee3.gif",
+        "broat-sarah.github.io/assets/img/hexagonbee4.gif",
+        "broat-sarah.github.io/assets/img/hexagonbee5.gif",
+        "broat-sarah.github.io/assets/img/img1-thumb.png",
+        "broat-sarah.github.io/assets/img/img1.png",
+        "broat-sarah.github.io/assets/img/img2-thumb.png",
+        "broat-sarah.github.io/assets/img/img2.png",
+        "broat-sarah.github.io/assets/img/img3-thumb.png",
+        "broat-sarah.github.io/assets/img/img3.png",
+        "broat-sarah.github.io/assets/img/img4-thumb.png",
+        "broat-sarah.github.io/assets/img/img4.png",
+        "broat-sarah.github.io/assets/img/lighthouse_report.png",
+        "broat-sarah.github.io/assets/img/preprallyv7.pdf",
+        "broat-sarah.github.io/assets/img/sarah.jpg",
+        "broat-sarah.github.io/assets/img/yuletidemeadfinal.pdf"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "fonts",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/.*",
+        "https:\\/\\/cdn\\.ampproject\\.org\\/.*"
+      ]
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "broat-sarah.github.io/assets/img/background.png": "72664572a5ec9488d53b59598b7dc023d34718e2",
+    "broat-sarah.github.io/assets/img/essbee.gif": "5266e012f5f708ec20841c695562d11d4d1b187f",
+    "broat-sarah.github.io/assets/img/essbee.png": "f6ef35c6429ca27fdec91c18e94fbb8a7b54e607",
+    "broat-sarah.github.io/assets/img/guntastolzl.png": "c3b31258eb6fc0a023c0ccdceb0ca1ded00cf987",
+    "broat-sarah.github.io/assets/img/hexagonbee3.gif": "66439714300b126f940ffa5e35ba2568704d9a84",
+    "broat-sarah.github.io/assets/img/hexagonbee4.gif": "4e1dd05bc12362f4be7030044c4c54d79b4e6069",
+    "broat-sarah.github.io/assets/img/hexagonbee5.gif": "ec823f64adeac70a4af6bdffe2dcaf06065db427",
+    "broat-sarah.github.io/assets/img/img1-thumb.png": "4cea9b5b7579a8c221a7e19b169daf6c2ca12eb1",
+    "broat-sarah.github.io/assets/img/img1.png": "14f72685cfcee4384cee7640d320d3bf0ed9b231",
+    "broat-sarah.github.io/assets/img/img2-thumb.png": "81cd2086c6a8abb1339d3d571a1ebf74d54af8ac",
+    "broat-sarah.github.io/assets/img/img2.png": "96984a6a545a44f764733c2d56b4f8e60c3a31eb",
+    "broat-sarah.github.io/assets/img/img3-thumb.png": "aee802061ef42b84f8af9de5b550673b89083b2c",
+    "broat-sarah.github.io/assets/img/img3.png": "5c7753e0c48676cabfadae21c2f3ada48b06795a",
+    "broat-sarah.github.io/assets/img/img4-thumb.png": "3ce85dccdd8bc34d7e65bad3d1f057db1f9525c5",
+    "broat-sarah.github.io/assets/img/img4.png": "d8ba6b502c1b93efe0003066b893362911625f7b",
+    "broat-sarah.github.io/assets/img/lighthouse_report.png": "3341cab8c1bf857a12411040f35f6354197e2c96",
+    "broat-sarah.github.io/assets/img/preprallyv7.pdf": "9c3229ccae46f58b6a4bdf87db74488d17544e61",
+    "broat-sarah.github.io/assets/img/sarah.jpg": "6139edc3fed36431d8c17f675e08769e3f29da36",
+    "broat-sarah.github.io/assets/img/yuletidemeadfinal.pdf": "eacb23fb79e8d44d75dee899dcb99dd325491e5d",
+    "broat-sarah.github.io/index.html": "d5d16a287e4112ee120544df7d73c58e2f7469b5",
+    "broat-sarah.github.io/main.fa8b5914b074f98a8950.js": "60f6f70974e959e1cb77ed39135b58eb92598c44",
+    "broat-sarah.github.io/polyfills.f6930679dbd092886231.js": "edc0e79fc6315db4d76b2e7e56702677a06e24c1",
+    "broat-sarah.github.io/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "broat-sarah.github.io/styles.a6f7ca33ecf09a6acfd0.css": "ea36bd4bf2cace29d4d39a0306516526e2c407c4"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
